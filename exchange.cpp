@@ -51,7 +51,24 @@ void Exchange::exchangeResult() {
 	resultCash = inputWon / exchangeRate;
 	
 	printf("환전금액 : %d(%s)\n",(int)resultCash,choiceNation);
-        
 	
+	printf("거스름돈 : %d(원)\n",(int)((inputWon-(int)resultCash*exchangeRate)/10)*10);
+        
+}
 
+int Exchange::receipt() {
+	
+	do {
+	cout << "계속하시겠습니까?(1:YES, 2,NO) : ";
+	cin >> tempNum;
+
+	if(tempNum == 1) {
+		return 1;
+	} else if(tempNum == 2) {
+		cout << "프로그램을 종료합니다." << endl;
+		return 0;
+	} else {
+		cout << "잘못입력하셨습니다." << endl;
+	}
+	} while (tempNum > 1);
 }

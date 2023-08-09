@@ -6,10 +6,12 @@ class Exchange {
 		int choiceRate; // 환전할 외화의 숫자
 		char choiceNation[4]; // 환전할 외화의 문자열
 		float resultCash;
+		int tempNum;
 
 	public:
 		void inputTask();
 		void choiceTask();
 		void exchangeResult();
+		int receipt();
 
 };
